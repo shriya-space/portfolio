@@ -7,7 +7,10 @@
     <title>Responsive Side Menu &ndash; Layout Examples &ndash; Pure</title>
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/js/scrollspy.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+    
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
         <!--[if lte IE 8]>
             <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
         <![endif]-->
@@ -15,8 +18,41 @@
             <link rel="stylesheet" href="css/layouts/side-menu.css">
         <!--<![endif]-->
     <style type="text/css">
-        .animate{
+        .active{
+            border-left: solid white 5px !important;
+            /*border*/
             transition: all 1s;
+        }
+        #menu .pure-menu-item{
+            border-left: solid #191818 5px;
+        }
+        #static-image img{
+            opacity: 0;
+            position: absolute;
+            left:0;
+            transition: all 1s;
+        }
+
+        #static-image img.opaque{
+            opacity: 1;
+        }
+        .img-circle {
+            border-radius: 50%;
+            box-shadow: 5px;
+        }
+        .img-circle-bordered {
+            box-shadow: 5px 5px 10px #ccc;
+            border-width: 10px;
+            border-style: solid;
+            border-color: white;
+            border-radius: 50%;
+        }
+        #static-image{
+            position: fixed;
+            top:30px;
+            right:35px;
+            height: 100px;
+            width: 100px;
         }
     </style>
 </head>
@@ -47,29 +83,12 @@
         </div>
     </div>
 
-<!--  <div class="row">
-    <div class="col s12 m9 l10">
-      <div id="introduction" class="section scrollspy">
-        <p>Content </p>
-      </div>
-
-      <div id="structure" class="section scrollspy">
-        <p>Content </p>
-      </div>
-
-      <div id="initialization" class="section scrollspy">
-        <p>Content </p>
-      </div>
-    </div>
-    <div class="col hide-on-small-only m3 l2">
-      <ul class="section table-of-contents">
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#structure">Structure</a></li>
-        <li><a href="#initialization">Intialization</a></li>
-      </ul>
-    </div>
-  </div> -->
     <div id="main">
+        <div id="static-image">
+            <img id="default" class="pure-img-responsive img-circle-bordered opaque" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
+            <img id="firstimg" class="pure-img-responsive img-circle-bordered opaque" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
+            <img id="secondimg" class="pure-img-responsive img-circle-bordered" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
+        </div>
         <div class="header">
             <h1>Page Title</h1>
             <h2>A subtitle for your page goes here</h2>
@@ -150,9 +169,22 @@
               offsetTop = href === "#" ? 0 : $(href).offset().top+1;
           $('html, body').stop().animate({ 
               scrollTop: offsetTop
-          }, 300);
+          }, 500, 'swing');
           e.preventDefault();
         });
+
+        function changePicture(imgtag){
+            console.log(imgtag);
+            imgtag='#'+imgtag+"img";
+            console.log(imgtag);
+            img=$('#static-image').find(imgtag);
+            console.log(img);
+            if(img.length==0){
+                img = $('#static-image').find("#default");
+            }
+            $('#static-image img').removeClass('opaque');
+            img.addClass('opaque');
+        }
 
         // Bind to scroll
         $(window).scroll(function(){
@@ -177,6 +209,7 @@
                menuItems
                  .parent().removeClass("active")
                  .end().filter("[href='#"+id+"']").parent().addClass("active");
+                 changePicture(id);
            }                   
         });
   });
