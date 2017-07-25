@@ -7,6 +7,52 @@ body {
     height: auto;
 }
 
+
+/* CUSTOM ADDITIONS */
+h1, h2, h3, h4, h5, h6, b, strong{
+    color:#F50057;
+}
+
+.active{
+    border-left: solid #FF4081 5px !important;
+    /*border*/
+    transition: all 1s;
+}
+#menu .pure-menu-item{
+    border-left: solid #263238 5px;
+}
+#static-image img{
+    opacity: 0;
+    position: absolute;
+    left:0;
+    transition: all 1s;
+}
+
+#static-image img.opaque{
+    opacity: 1;
+}
+.img-circle {
+    border-radius: 50%;
+    box-shadow: 5px;
+}
+.img-circle-bordered {
+    box-shadow: 5px 5px 10px #ccc;
+    border-width: 10px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 50%;
+}
+#static-image{
+    position: fixed;
+    top:30px;
+    right:35px;
+    height: 100px;
+    width: 100px;
+}
+
+/*END of CUSTOM ADDITIONS*/
+
+
 /*
 Add transition to containers so they can push in and out.
 */
@@ -49,7 +95,7 @@ The content `<div>` is where all your content goes.
 
 .header {
      margin: 0;
-     color: #333;
+     /*color: #333;*/
      text-align: center;
      padding: 2.5em 2em 0;
      border-bottom: 1px solid #eee;
@@ -61,7 +107,7 @@ The content `<div>` is where all your content goes.
     }
      .header h2 {
         font-weight: 300;
-        color: #ccc;
+        /*color: #ccc;*/
         padding: 0;
         margin-top: 0;
     }
@@ -69,7 +115,7 @@ The content `<div>` is where all your content goes.
 .content-subhead {
     margin: 50px 0 20px 0;
     font-weight: 300;
-    color: #888;
+    /*color: #888;*/
 }
 
 
@@ -87,7 +133,7 @@ appears on the left side of the page.
     left: 0;
     bottom: 0;
     z-index: 1000; /* so the menu or its navicon stays above all content */
-    background: #191818;
+    background: #455A64;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -95,7 +141,7 @@ appears on the left side of the page.
     All anchors inside the menu should be styled like this.
     */
     #menu a {
-        color: #999;
+        color: #fff;
         border: none;
         padding: 0.6em 0 0.6em 0.6em;
     }
@@ -129,7 +175,7 @@ appears on the left side of the page.
     */
     #menu .pure-menu-selected,
     #menu .pure-menu-heading {
-        background: #1f8dd6;
+        background: #FF4081;
     }
         /*
         This styles a link within a selected menu item `<li>`.
