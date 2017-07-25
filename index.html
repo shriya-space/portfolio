@@ -16,13 +16,16 @@ Primary #455A64 , #90A4AE , #263238
     <script type="text/javascript" src="/js/scrollspy.js"></script>
     <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
     
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    <link rel="stylesheet/less" type="text/css" href="css/layouts/side-menu.less" />
+    <script src="/js/less.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="css/pure-min.css" integrity="sha384-" crossorigin="anonymous">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
         <!--[if lte IE 8]>
             <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
         <![endif]-->
         <!--[if gt IE 8]><!-->
-            <link rel="stylesheet" href="css/layouts/side-menu.css">
+            <!-- <link rel="stylesheet" href="css/layouts/side-menu.css"> -->
         <!--<![endif]-->
 </head>
 <body>
@@ -37,17 +40,16 @@ Primary #455A64 , #90A4AE , #263238
 
     <div id="menu">
         <div class="pure-menu">
-            <a class="pure-menu-heading" href="#none">Company</a>
+            <a class="pure-menu-heading" href="#none">Portfolio</a>
 
             <ul class="pure-menu-list section animate">
-                <li class="pure-menu-item"><a href="#first" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item"><a href="#second" class="pure-menu-link">About</a></li>
+                <li class="pure-menu-item"><a href="#about" class="pure-menu-link">About</a></li>
+                <li class="pure-menu-item"><a href="#workex" class="pure-menu-link">Work Experience</a></li>
+                <li class="pure-menu-item"><a href="#projects" class="pure-menu-link">Projects</a></li>
+                <li class="pure-menu-item"><a href="#education" class="pure-menu-link">Education</a></li>
+                <li class="pure-menu-item"><a href="#skills" class="pure-menu-link">Skills</a></li>
+                <li class="pure-menu-item"><a href="#achievements" class="pure-menu-link">Achievements</a></li>
 
-                <li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
-                    <a href="#none" class="pure-menu-link">Services</a>
-                </li>
-
-                <li class="pure-menu-item"><a href="#third" class="pure-menu-link">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -56,7 +58,7 @@ Primary #455A64 , #90A4AE , #263238
         <div id="static-image">
             <img id="default" class="pure-img-responsive img-circle-bordered opaque" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
             <img id="firstimg" class="pure-img-responsive img-circle-bordered opaque" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
-            <img id="secondimg" class="pure-img-responsive img-circle-bordered" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
+            <img id="uclaimg" class="pure-img-responsive img-circle-bordered" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
         </div>
         <div class="header">
             <h1>Page Title</h1>
@@ -64,7 +66,7 @@ Primary #455A64 , #90A4AE , #263238
         </div>
 
         <div class="content">
-            <div id="first" class="scrollspy section">
+            <div id="about" class="scrollspy section">
                 <h2 class="content-subhead">How to use this layout</h2>
                 <p>
                     To use this layout, you can just copy paste the HTML, along with the CSS in <a href="/css/layouts/side-menu.css" alt="Side Menu CSS">side-menu.css</a>, and the JavaScript in <a href="/js/ui.js">ui.js</a>. The JS file uses vanilla JavaScript to simply toggle an <code>active</code> class that makes the menu responsive.
@@ -76,7 +78,32 @@ Primary #455A64 , #90A4AE , #263238
                 </p>
             </div>
 
-            <div id="second" class="scrollspy section">
+            <div id="workex" class="scrollspy section">
+                <h2 class="content-subhead">Work Experience</h2>
+                    <div target-img="ucla" class="scrollspy">
+                        <h4><b>Teaching Assistant</b> for Fundamentals of Artifical Intelligence, UCLA</h4>
+                        <p>Conducting discussion sessions, grading assignments and evaluating projects for undergraduate students in Artificial Intelligence</p>
+                    </div>
+
+                    <h4><b>Web Developer and Designer</b>, Tata Consultancy Services, Chennai May - June 2015</h4>
+                    <p>Redesigned the 'Campus Commune' portal, a technical website for students and employees, using Front-End tools including HTML5, Javascript; changed the information architecture of both portals using Ruby on Rails.</p>
+                    
+                    <h4><b>Student Director</b>, Web and Tech Team, CEG Tech Forum, Chennai July 2015 - July 2016</h4>
+                    <p>Developed college event and symposium website, mobile applications and online games and provided technical support for the events; <br>
+                    Developed the UI for online events Cerebra, Athena and Sherlock using AngularJS, HTML5, CSS3, Javascript, Jquery and RenPY. <br>
+                    Worked with AWS and Ruby on Rails backend technology <br>
+                    Trained freshmen and sophomores to handle technical issues during online events, mentored them in Front-End and Android Development and conducted technical workshops for students from various colleges</p>
+            </div>
+
+            <div id="projects" class="scrollspy section">
+                
+                <h2 class="content-subhead">Try Resizing your Browser</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+
+            <div id="education" class="scrollspy section">
                 <h2 class="content-subhead">Now Let's Speak Some Latin</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -87,27 +114,28 @@ Primary #455A64 , #90A4AE , #263238
                 </p>
             </div>
 
-            <div id="third" class="scrollspy section">
-                <div class="pure-g">
-                    <div class="pure-u-1-4">
-                        <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
-                    </div>
-                    <div class="pure-u-1-4">
-                        <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
-                    </div>
-                    <div class="pure-u-1-4">
-                        <img class="pure-img-responsive" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store">
-                    </div>
-                    <div class="pure-u-1-4">
-                        <img class="pure-img-responsive" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain">
-                    </div>
-                </div>
+            <div id="skills" class="scrollspy section">
+                <h2 class="content-subhead">Now Let's Speak Some Latin</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
             </div>
 
-            <h2 class="content-subhead">Try Resizing your Browser</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <div id="achievements" class="scrollspy section">
+                <h2 class="content-subhead">Now Let's Speak Some Latin</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+
         </div>
     </div>
 </div>
@@ -124,12 +152,17 @@ Primary #455A64 , #90A4AE , #263238
             // All list items
             menuItems = topMenu.find("a"),
             // Anchors corresponding to menu items
-            scrollItems = menuItems.map(function(){
-                console.log($(this).attr("href"));
-              var item = $($(this).attr("href"));
-              if (item.length) { return item; }
+            // scrollItems = menuItems.map(function(){
+            //     console.log($(this).attr("href"));
+            //   var item = $($(this).attr("href"));
+            //   if (item.length) { return item; }
+            // });
+            // Now independant of menu
+            scrollItems = $('.scrollspy').map(function(){
+                return $(this);
             });
-            console.log(menuItems);
+            console.log("scrollItems");
+            console.log(scrollItems);
 
         // Bind click handler to menu items
         // so we can get a fancy scroll animation
@@ -143,8 +176,6 @@ Primary #455A64 , #90A4AE , #263238
         });
 
         function changePicture(imgtag){
-            console.log(imgtag);
-            imgtag='#'+imgtag+"img";
             console.log(imgtag);
             img=$('#static-image').find(imgtag);
             console.log(img);
@@ -163,7 +194,6 @@ Primary #455A64 , #90A4AE , #263238
            // Get id of current scroll item
            var cur = scrollItems.map(function(){
                 if ($(this).offset().top < fromTop){
-
                     return this;
                 }
            });
@@ -178,7 +208,7 @@ Primary #455A64 , #90A4AE , #263238
                menuItems
                  .parent().removeClass("active")
                  .end().filter("[href='#"+id+"']").parent().addClass("active");
-                 changePicture(id);
+                changePicture("#"+cur.attr('target-img')+"img");
            }                   
         });
   });

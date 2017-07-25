@@ -1,3 +1,12 @@
+/*Secondary #FF4081 , #FF80AB , #F50057*/
+/*Primary #455A64 , #90A4AE , #263238*/
+@primary: #455A64;
+@secondary: #FF4081;
+@primary_dark: #263238;
+@primary_light: #90A4AE;
+@secondary_dark: #F50057;
+@secondary_light: #FF80AB;
+
 body {
     color: #777;
 }
@@ -9,17 +18,20 @@ body {
 
 
 /* CUSTOM ADDITIONS */
+h3, h4, h5, h6{
+    font-weight: normal;
+}
 h1, h2, h3, h4, h5, h6, b, strong{
-    color:#F50057;
+    color: @secondary_dark;
 }
 
 .active{
-    border-left: solid #FF4081 5px !important;
+    border-left: solid @secondary 5px !important;
     /*border*/
     transition: all 1s;
 }
 #menu .pure-menu-item{
-    border-left: solid #263238 5px;
+    border-left: solid @primary_dark 5px;
 }
 #static-image img{
     opacity: 0;
@@ -133,7 +145,7 @@ appears on the left side of the page.
     left: 0;
     bottom: 0;
     z-index: 1000; /* so the menu or its navicon stays above all content */
-    background: #455A64;
+    background: @primary;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -175,7 +187,7 @@ appears on the left side of the page.
     */
     #menu .pure-menu-selected,
     #menu .pure-menu-heading {
-        background: #FF4081;
+        background: @secondary;
     }
         /*
         This styles a link within a selected menu item `<li>`.
