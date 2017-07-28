@@ -1,0 +1,61 @@
+<style>
+
+
+</style>
+<div class="content" style="max-width:80%">
+
+	<div id="handle">
+		<ul class="timeline">
+			{{#events}}
+		        <li class="{{class}}">
+		          <div class="timeline-image">
+		            <img class="img-circle pure-img-responsive" src="{{img}}" alt="" style="height:100px; width:100px; ">
+		          </div>
+		          <div class="timeline-panel">
+		            <div class="timeline-heading">
+		              <h4>{{{title}}}</h4>
+		              <h4 class="subheading">{{{time}}}</h4>
+		            </div>
+		            <div class="timeline-body">
+		              <p class="text-muted">
+		                {{{content}}}
+		              </p>
+		            </div>
+		          </div>
+		        </li>
+	        {{/events}}
+	    </ul>
+	</div>
+	<script type="text/javascript">
+
+		data = {
+				events: [
+					{
+						"title": "<b>SAP Web Developer Intern</b>, Adobe, San Jose, California", 
+						"time": "Jun 2017 – current", 
+						"content": "", 
+						"img":"/img/adobe.jpg",
+					},
+					{
+						"title": "<b>Teaching Assistant</b> for Fundamentals of Artifical Intelligence, UCLA", 
+						"time": "Jan 2017 - current", 
+						"content": "Conducting discussion sessions, grading assignments and evaluating projects for undergraduate students in Artificial Intelligence", 
+						"img":"/img/UCLA.jpg",
+					},
+				]
+			}
+		index = 0
+		data.events=data.events.map(function(event){
+			if(index%2){
+				event["class"] = "timeline-inverted"
+			}else{
+				event["class"] = ""
+			}
+			index = index + 1;
+			return event;
+		});
+
+		var rendered = Mustache.render($('#handle').html(), data);
+	  	$('#handle').html(rendered);
+	</script>
+</div>
