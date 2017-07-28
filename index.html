@@ -3,15 +3,13 @@
 <!-- DATA
 Secondary #FF4081 , #FF80AB , #F50057
 Primary #455A64 , #90A4AE , #263238
-
  -->
 
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+        <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
-    <title>Responsive Side Menu &ndash; Layout Examples &ndash; Pure</title>
     <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/js/scrollspy.js"></script>
     <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
@@ -29,191 +27,33 @@ Primary #455A64 , #90A4AE , #263238
         <!--<![endif]-->
 </head>
 <body>
+    <div id="layout">
+        <!-- Menu toggle -->
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
 
+        <div id="menu">
+            <div class="pure-menu">
+                <a class="pure-menu-heading" href="#none">Portfolio</a>
 
-<div id="layout">
-    <!-- Menu toggle -->
-    <a href="#menu" id="menuLink" class="menu-link">
-        <!-- Hamburger icon -->
-        <span></span>
-    </a>
+                <ul class="pure-menu-list section animate">
+                    <li class="pure-menu-item"><a href="#about" class="pure-menu-link">About</a></li>
+                    <li class="pure-menu-item"><a href="#workex" class="pure-menu-link">Work Experience</a></li>
+                    <li class="pure-menu-item"><a href="#projects" class="pure-menu-link">Projects</a></li>
+                    <li class="pure-menu-item"><a href="#education" class="pure-menu-link">Education</a></li>
+                    <li class="pure-menu-item"><a href="#skills" class="pure-menu-link">Skills</a></li>
+                    <li class="pure-menu-item"><a href="#achievements" class="pure-menu-link">Achievements</a></li>
 
-    <div id="menu">
-        <div class="pure-menu">
-            <a class="pure-menu-heading" href="#none">Portfolio</a>
-
-            <ul class="pure-menu-list section animate">
-                <li class="pure-menu-item"><a href="#about" class="pure-menu-link">About</a></li>
-                <li class="pure-menu-item"><a href="#workex" class="pure-menu-link">Work Experience</a></li>
-                <li class="pure-menu-item"><a href="#projects" class="pure-menu-link">Projects</a></li>
-                <li class="pure-menu-item"><a href="#education" class="pure-menu-link">Education</a></li>
-                <li class="pure-menu-item"><a href="#skills" class="pure-menu-link">Skills</a></li>
-                <li class="pure-menu-item"><a href="#achievements" class="pure-menu-link">Achievements</a></li>
-
-            </ul>
+                </ul>
+            </div>
         </div>
+        <div id="main">
+        </div>
+
     </div>
-
-    <div id="main">
-        <div id="static-image">
-            <img id="default" class="pure-img-responsive img-circle-bordered opaque" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
-            <img id="firstimg" class="pure-img-responsive img-circle-bordered opaque" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
-            <img id="uclaimg" class="pure-img-responsive img-circle-bordered" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
-        </div>
-        <div class="header">
-            <h1>Page Title</h1>
-            <h2>A subtitle for your page goes here</h2>
-        </div>
-
-        <div class="content">
-            <div id="about" class="scrollspy section">
-                <h2 class="content-subhead">How to use this layout</h2>
-                <p>
-                    To use this layout, you can just copy paste the HTML, along with the CSS in <a href="/css/layouts/side-menu.css" alt="Side Menu CSS">side-menu.css</a>, and the JavaScript in <a href="/js/ui.js">ui.js</a>. The JS file uses vanilla JavaScript to simply toggle an <code>active</code> class that makes the menu responsive.
-                    To use this layout, you can just copy paste the HTML, along with the CSS in <a href="/css/layouts/side-menu.css" alt="Side Menu CSS">side-menu.css</a>, and the JavaScript in <a href="/js/ui.js">ui.js</a>. The JS file uses vanilla JavaScript to simply toggle an <code>active</code> class that makes the menu responsive.
-                    To use this layout, you can just copy paste the HTML, along with the CSS in <a href="/css/layouts/side-menu.css" alt="Side Menu CSS">side-menu.css</a>, and the JavaScript in <a href="/js/ui.js">ui.js</a>. The JS file uses vanilla JavaScript to simply toggle an <code>active</code> class that makes the menu responsive.
-                    To use this layout, you can just copy paste the HTML, along with the CSS in <a href="/css/layouts/side-menu.css" alt="Side Menu CSS">side-menu.css</a>, and the JavaScript in <a href="/js/ui.js">ui.js</a>. The JS file uses vanilla JavaScript to simply toggle an <code>active</code> class that makes the menu responsive.
-                    To use this layout, you can just copy paste the HTML, along with the CSS in <a href="/css/layouts/side-menu.css" alt="Side Menu CSS">side-menu.css</a>, and the JavaScript in <a href="/js/ui.js">ui.js</a>. The JS file uses vanilla JavaScript to simply toggle an <code>active</code> class that makes the menu responsive.
-                    To use this layout, you can just copy paste the HTML, along with the CSS in <a href="/css/layouts/side-menu.css" alt="Side Menu CSS">side-menu.css</a>, and the JavaScript in <a href="/js/ui.js">ui.js</a>. The JS file uses vanilla JavaScript to simply toggle an <code>active</code> class that makes the menu responsive.
-                </p>
-            </div>
-
-            <div id="workex" class="scrollspy section">
-                <h2 class="content-subhead">Work Experience</h2>
-                    <div target-img="ucla" class="scrollspy">
-                        <h4><b>Teaching Assistant</b> for Fundamentals of Artifical Intelligence, UCLA</h4>
-                        <p>Conducting discussion sessions, grading assignments and evaluating projects for undergraduate students in Artificial Intelligence</p>
-                    </div>
-
-                    <h4><b>Web Developer and Designer</b>, Tata Consultancy Services, Chennai May - June 2015</h4>
-                    <p>Redesigned the 'Campus Commune' portal, a technical website for students and employees, using Front-End tools including HTML5, Javascript; changed the information architecture of both portals using Ruby on Rails.</p>
-                    
-                    <h4><b>Student Director</b>, Web and Tech Team, CEG Tech Forum, Chennai July 2015 - July 2016</h4>
-                    <p>Developed college event and symposium website, mobile applications and online games and provided technical support for the events; <br>
-                    Developed the UI for online events Cerebra, Athena and Sherlock using AngularJS, HTML5, CSS3, Javascript, Jquery and RenPY. <br>
-                    Worked with AWS and Ruby on Rails backend technology <br>
-                    Trained freshmen and sophomores to handle technical issues during online events, mentored them in Front-End and Android Development and conducted technical workshops for students from various colleges</p>
-            </div>
-
-            <div id="projects" class="scrollspy section">
-                
-                <h2 class="content-subhead">Try Resizing your Browser</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-
-            <div id="education" class="scrollspy section">
-                <h2 class="content-subhead">Now Let's Speak Some Latin</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-
-            <div id="skills" class="scrollspy section">
-                <h2 class="content-subhead">Now Let's Speak Some Latin</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-
-            <div id="achievements" class="scrollspy section">
-                <h2 class="content-subhead">Now Let's Speak Some Latin</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-
-
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        // Cache selectors
-        var lastId,
-            topMenu = $("#menu"),
-            topMenuHeight = topMenu.outerHeight()+15,
-            // All list items
-            menuItems = topMenu.find("a"),
-            // Anchors corresponding to menu items
-            // scrollItems = menuItems.map(function(){
-            //     console.log($(this).attr("href"));
-            //   var item = $($(this).attr("href"));
-            //   if (item.length) { return item; }
-            // });
-            // Now independant of menu
-            scrollItems = $('.scrollspy').map(function(){
-                return $(this);
-            });
-            console.log("scrollItems");
-            console.log(scrollItems);
-
-        // Bind click handler to menu items
-        // so we can get a fancy scroll animation
-        menuItems.click(function(e){
-          var href = $(this).attr("href"),
-              offsetTop = href === "#" ? 0 : $(href).offset().top+1;
-          $('html, body').stop().animate({ 
-              scrollTop: offsetTop
-          }, 500, 'swing');
-          e.preventDefault();
-        });
-
-        function changePicture(imgtag){
-            console.log(imgtag);
-            img=$('#static-image').find(imgtag);
-            console.log(img);
-            if(img.length==0){
-                img = $('#static-image').find("#default");
-            }
-            $('#static-image img').removeClass('opaque');
-            img.addClass('opaque');
-        }
-
-        // Bind to scroll
-        $(window).scroll(function(){
-           // Get container scroll position
-           var fromTop = $(this).scrollTop();
-           
-           // Get id of current scroll item
-           var cur = scrollItems.map(function(){
-                if ($(this).offset().top < fromTop){
-                    return this;
-                }
-           });
-           // Get the id of the current element
-           cur = cur[cur.length-1];
-           // console.log(cur);
-           var id = cur && cur.length ? cur[0].id : "";
-           
-           if (lastId !== id) {
-               lastId = id;
-               // Set/remove active class
-               menuItems
-                 .parent().removeClass("active")
-                 .end().filter("[href='#"+id+"']").parent().addClass("active");
-                changePicture("#"+cur.attr('target-img')+"img");
-           }                   
-        });
-  });
-  </script>
-<script src="js/ui.js"></script>
-
+    <script src="js/init.js"></script>
+    <script src="js/ui.js"></script>
 </body>
 </html>
