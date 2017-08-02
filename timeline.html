@@ -1,7 +1,6 @@
-<style>
-
-
-</style>
+<head>
+    <title>Shriya &ndash; Timeline</title>
+</head>
 <div class="content" style="max-width:80%">
 
 	<div id="handle">
@@ -69,5 +68,7 @@
 
 		var rendered = Mustache.render($('#handle').html(), data);
 	  	$('#handle').html(rendered);
+	  	$('#menu li a').parent().removeClass("active");
+        $('#menu li a').filter("[href='#/timeline']").parent().addClass("active");
 	</script>
 </div>

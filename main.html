@@ -1,5 +1,5 @@
 <head>
-    <title>Shriya &ndash; Porfolio</title>
+    <title>Shriya &ndash; Portfolio</title>
 </head>
 
 <div id="static-image">
@@ -18,7 +18,7 @@
     <div id="about" class="scrollspy section">
         <h2 class="content-subhead">About</h2>
         <p>
-            Coder Nerd Girl.
+            A computer science graduate - currently working at Adobe, San Jose - skilled in web development, UI/UX and Interaction Design. Passionate about exploring Machine Learning, Artificial Intelligence and Human-Computer Interaction in greater depth.
         </p>
     </div>
 
@@ -184,7 +184,13 @@
     <div id="achievements" class="scrollspy section">
         <h2 class="content-subhead">Achievements</h2>
         <p>
-            Too many to list here. Browser will crash.
+            <ul>
+                <li> Received a Gold medal at College of Engineering, Guindy for securing the highest grade in the Computer Science and Engineering Department</li>
+                <li> Received a Statement of Accomplishment in Python Game Programming from Rice University ( Coursera )  </li>
+                <li> Received a Statement of Completion, Machine Learning </li>
+                <li> Secured 2nd place in Samhitha's(Computer Science Symposium of Madras Institute of Technology) Hackathon </li>
+                <li> Participated actively in several coding and hackathon events </li>
+            </ul>
         </p>
     </div>
 </div>
@@ -199,32 +205,38 @@
             menuItems = topMenu.find("a"),
             // Anchors corresponding to menu items
             scrollItems_menu = menuItems.map(function(){
-                console.log($(this).attr("href"));
-              var item = $($(this).attr("href"));
-              if (item.length) { return item; }
+                // console.log($(this).attr("href"));
+              try{
+                  var item = $($(this).attr("href"));
+                  if (item.length) { return item; }
+              }catch(err){}
             });
             // Now independent of menu
+                // console.log("test");
             scrollItems = $('.scrollspy').map(function(){
                 return $(this);
             });
-            console.log("scrollItems");
-            console.log(scrollItems);
+            // console.log("scrollItems");
+            // console.log(scrollItems);
 
         // Bind click handler to menu items
         // so we can get a fancy scroll animation
         menuItems.click(function(e){
-          var href = $(this).attr("href"),
-              offsetTop = href === "#" ? 0 : $(href).offset().top+1;
-          $('html, body').stop().animate({ 
-              scrollTop: offsetTop
-          }, 500, 'swing');
-          e.preventDefault();
+            try{
+                  var href = $(this).attr("href")
+                      // offsetTop = href === "#" ? 0 : $(href).offset().top+1;
+                  $('html, body').stop().animate({ 
+                      scrollTop: $(href).offset().top+1
+                  }, 500, 'swing');
+                  e.preventDefault();
+            }catch(err){
+            }
         });
 
         function changePicture(imgtag){
-            console.log(imgtag);
+            // console.log(imgtag);
             img=$('#static-image').find(imgtag);
-            console.log(img);
+            // console.log(img);
             if(img.length==0){
                 img = $('#static-image').find("#default");
             }
@@ -235,34 +247,38 @@
         // Bind to scroll
         $(window).scroll(function(){
            // Get container scroll position
-           var fromTop = $(this).scrollTop();
-           
-           // Get id of current scroll item
-           var cur = scrollItems.map(function(){
-                if ($(this).offset().top < fromTop + 50){
-                    return this;
-                }
-           });
-           // Get the id of the current element
-           cur = cur[cur.length-1];
-           // console.log(fromTop, $(cur).offset().top)
-           // console.log(cur);
-           var id = cur && cur.length ? cur[0].id : "";
-           
-           if (lastId !== id) {
-               lastId = id;
-               // Set/remove active class
-                if (menuItems.parent().find("[href='#"+id+"']").length >= 1){ // FIXME : Inner scrollspy doesnt cause highlight disable which is correct . But, Buggy when scrolling up
-                   menuItems
-                     .parent().removeClass("active")
-                     .end().filter("[href='#"+id+"']").parent().addClass("active");
-                }
-                var target_img = cur.attr('target-img');
-                if (!target_img){
-                    target_img = "default";
-                }
-                changePicture("#"+target_img+"img");
-           }                   
+           try{
+               var fromTop = $(this).scrollTop();
+               
+               // Get id of current scroll item
+               var cur = scrollItems.map(function(){
+                    if ($(this).offset().top < fromTop + 50){
+                        return this;
+                    }
+               });
+               // Get the id of the current element
+               cur = cur[cur.length-1];
+               // console.log(fromTop, $(cur).offset().top)
+               // console.log(cur);
+               var id = cur && cur.length ? cur[0].id : "";
+
+               if (lastId !== id && $('#'+id).length != 0) {
+                   lastId = id;
+                   // Set/remove active class
+                    if (menuItems.parent().find("[href='#"+id+"']").length >= 1){ // FIXME : Inner scrollspy doesnt cause highlight disable which is correct . But, Buggy when scrolling up
+                       menuItems
+                         .parent().removeClass("active")
+                         .end().filter("[href='#"+id+"']").parent().addClass("active");
+                    }
+                    var target_img = cur.attr('target-img');
+                    if (!target_img){
+                        target_img = "default";
+                    }
+                    changePicture("#"+target_img+"img");
+               }                 
+            }catch(err){
+
+            }  
         });
   });
   </script>

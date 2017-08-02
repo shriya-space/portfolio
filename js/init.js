@@ -13,13 +13,20 @@ $(document).ready(function(){
 		if(path==null){
 			path = 'main'
 		}
+		oldhash = document.location.hash;
 		history.pushState('data', '', '#/' + path);
 		$('#main').load('/'+path+'.html');
+		// console.log("Gone")
+		if(!document.location.hash.match(/#\//g) && $(document).find(oldhash).length != 0){
+			$('#menu li a').filter("[href='"+oldhash+"']").click();
+		}
 	}
 	
 	hashRedirecter();
 
 	$(window).bind('hashchange', function() {
-		hashRedirecter();
+		if(document.location.hash.match(/#\//g) || $(document.location.hash).length==0){
+			hashRedirecter();
+		}
 	});
 });
