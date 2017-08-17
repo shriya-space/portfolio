@@ -340,17 +340,17 @@ h1, h2, h3, h4, h5, h6, b, strong{
     box-shadow: 5px;
 }
 .img-circle-bordered {
-    box-shadow: 5px 5px 10px #ccc;
-    border-width: 10px;
-    border-style: solid;
-    border-color: white;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    border-width: 5px;
+    border-style: double;
+    border-color: #fff;
     border-radius: 50%;
     width: 100px;
     height: 100px;
 }
 #static-image{
     position: fixed;
-    top:30px;
+    top:2px;
     right:35px;
     height: 100px;
     width: 100px;
@@ -397,14 +397,23 @@ The content `<div>` is where all your content goes.
     max-width: 800px;
     margin-bottom: 50px;
     line-height: 1.6em;
+    position: relative;
+    top : 125px;
 }
 
 .header {
      margin: 0;
      /*color: #333;*/
      text-align: center;
-     padding: 2.5em 2em 0;
      border-bottom: 1px solid #eee;
+     position: fixed;
+     background : #455A64;
+     top : 0;
+     left : 0;
+     width: 100%;
+     z-index: 1;
+     padding-top: 20px;
+     padding-bottom: 20px;
  }
     .header h1 {
         margin: 0.2em 0;
@@ -561,12 +570,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 */
 @media (min-width: 48em) {
 
-    .header,
-    .content {
-        padding-left: 2em;
-        padding-right: 2em;
-    }
-
+    
     #layout {
         padding-left: 150px; /* left col width "#menu" */
         left: 0;
