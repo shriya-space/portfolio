@@ -6,7 +6,10 @@
 @primary_light: #90A4AE;
 @secondary_dark: #F50057;
 @secondary_light: #FF80AB;
-
+@side_menu_width: 200px;
+@my_dp_size: 100px;
+@title_font: 'Josefin Sans';
+@body_font: 'Josefin Sans';
 body {
     color: #777;
 }
@@ -90,9 +93,9 @@ body {
     border-radius: 100%;
     /*background-color: @primary;*/
     box-shadow: 0 0 5px @primary_dark;
-    width: 100px;
-    height: 100px;
-    margin-left: -100px;
+    width: @my_dp_size;
+    height: @my_dp_size;
+    margin-left: -@my_dp_size;
     top:25%;
     /*margin-top: 50%;*/
 }
@@ -156,7 +159,7 @@ body {
     bottom: 0;
     left: 825px;
     width: 4px;
-    height:100px;
+    height:@my_dp_size;
     background-color: #3b5998;
     -ms-transform: rotate(-44deg); /* IE 9 */
     -webkit-transform: rotate(-44deg); /* Safari */
@@ -171,7 +174,7 @@ body {
     bottom: 0;
     left: 625px;
     width: 4px;
-    height:100px;
+    height:@my_dp_size;
     background-color: #3b5998;
     -ms-transform: rotate(44deg); /* IE 9 */
     -webkit-transform: rotate(44deg); /* Safari */
@@ -266,8 +269,8 @@ body {
   }
   .timeline>li .timeline-image {
     position: static;
-    width: 100px;
-    height: 100px;
+    width: @my_dp_size;
+    height: @my_dp_size;
     margin-bottom:0px;
   }
   .timeline>li:nth-child(even) .timeline-image {
@@ -312,18 +315,22 @@ ul{
 h1, h2, h3, h4, h5, h6, b, strong{
     color: @secondary_dark;
 }
-
+p, h4,.section ul{
+    font-family : @body_font;
+}
 .pull-right{
     float: right;
 }
 
 .active{
-    border-left: solid @secondary 5px !important;
+    border-left: solid @secondary 10px;
     /*border*/
     transition: all 1s;
 }
 #menu .pure-menu-item{
-    border-left: solid @primary_dark 5px;
+    border-left: solid @primary_dark 10px;
+    line-height: 1.1;
+    box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
 }
 #static-image img{
     opacity: 0;
@@ -345,15 +352,15 @@ h1, h2, h3, h4, h5, h6, b, strong{
     border-style: double;
     border-color: #fff;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
 }
 #static-image{
     position: fixed;
     top:2px;
     right:35px;
-    height: 100px;
-    width: 100px;
+    height: @my_dp_size;
+    width: @my_dp_size;
 }
 
 /*END of CUSTOM ADDITIONS*/
@@ -398,7 +405,7 @@ The content `<div>` is where all your content goes.
     margin-bottom: 50px;
     line-height: 1.6em;
     position: relative;
-    top : 125px;
+    top : @my_dp_size;
 }
 
 .header {
@@ -407,7 +414,7 @@ The content `<div>` is where all your content goes.
      text-align: center;
      border-bottom: 1px solid #eee;
      position: fixed;
-     background : #455A64;
+     background : #2d3b42;
      top : 0;
      left : 0;
      width: 100%;
@@ -419,18 +426,20 @@ The content `<div>` is where all your content goes.
         margin: 0.2em 0;
         font-size: 3em;
         font-weight: 300;
+        font-family: @title_font;
     }
-     .header h2 {
+     /*.header h2 {
         font-weight: 300;
-        /*color: #ccc;*/
+        color: #ccc;
         padding: 0;
         margin-top: 0;
-    }
+    }*/
 
 .content-subhead {
     margin: 50px 0 20px 0;
     font-weight: 300;
     /*color: #888;*/
+    font-family: @title_font;
 }
 
 
@@ -441,16 +450,19 @@ appears on the left side of the page.
 */
 
 #menu {
-    margin-left: -150px; /* "#menu" width */
-    width: 150px;
+    margin-left: -@side_menu_width; /* "#menu" width */
+    width: @side_menu_width;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     z-index: 1000; /* so the menu or its navicon stays above all content */
     background: @primary;
-    overflow-y: auto;
+    overflow-y : auto;
     -webkit-overflow-scrolling: touch;
+    font-family: @body_font;
+/*font-family: 'Cardo', serif;*/
+
 }
     /*
     All anchors inside the menu should be styled like this.
@@ -459,6 +471,9 @@ appears on the left side of the page.
         color: #fff;
         border: none;
         padding: 0.6em 0 0.6em 0.6em;
+        padding-top: 12.5%;
+        padding-bottom: 12.5%;
+        height: inherit;
     }
 
     /*
@@ -468,6 +483,7 @@ appears on the left side of the page.
      #menu .pure-menu ul {
         border: none;
         background: transparent;
+        width: 100%;
     }
 
     /*
@@ -503,9 +519,10 @@ appears on the left side of the page.
     This styles the menu heading.
     */
     #menu .pure-menu-heading {
-        font-size: 110%;
+        font-size: 1.2rem;
         color: #fff;
-        margin: 0;
+        height: 30px;
+        line-height: 1.8;
     }
 
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
@@ -572,16 +589,16 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
     
     #layout {
-        padding-left: 150px; /* left col width "#menu" */
+        padding-left: @side_menu_width; /* left col width "#menu" */
         left: 0;
     }
     #menu {
-        left: 150px;
+        left: @side_menu_width;
     }
 
     .menu-link {
         position: fixed;
-        left: 150px;
+        left: @side_menu_width;
         display: none;
     }
 
@@ -597,8 +614,34 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         * Tap the menu to trigger the active state.
         * Make the window large again.
     */
-    #layout.active {
+    #layout.active #menu {
         position: relative;
-        left: 150px;
+        left: @side_menu_width;
+        border : none;
     }
+    .active{
+        border : none;
+    }
+    #menu{
+        /*margin-left : -150px;*/
+    }
+    .menu-link.active{
+        border-left : none;
+    }
+    .menu-link{
+        padding : 38px;
+        top : 0;
+    }
+    .content {
+        top : 50px;
+    }
+    #my_name{
+        font-size: 1.5rem;
+    }
+    #static-image{
+        width: @my_dp_size/1.5;
+        height: @my_dp_size/1.5;
+    }
+
+
 }
