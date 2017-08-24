@@ -8,6 +8,7 @@
 @secondary_light: #FF80AB;
 @side_menu_width: 200px;
 @my_dp_size: 100px;
+@black: #222;
 @title_font: 'Josefin Sans';
 @body_font: 'Josefin Sans';
 body {
@@ -40,7 +41,7 @@ body {
     position: relative;
     margin-bottom: 50px;
     /*height: 180px;*/
-    right:-50px;
+    right:-41px;
 }
 
 .timeline>li:nth-child(odd) {
@@ -88,7 +89,7 @@ body {
 .timeline>li .timeline-image {
     z-index: 100;
     position: absolute;
-    left: 50%;
+    left: 430px;
     /*border: 5px solid @secondary_dark;*/
     border-radius: 100%;
     /*background-color: @primary;*/
@@ -419,7 +420,7 @@ The content `<div>` is where all your content goes.
      top : 0;
      left : 100px;
      width: 100%;
-     z-index: 1;
+     z-index: 10;
      padding-top: 20px;
      padding-bottom: 20px;
  }
@@ -441,6 +442,11 @@ The content `<div>` is where all your content goes.
     font-weight: 300;
     /*color: #888;*/
     font-family: @title_font;
+    width: auto;
+    background : #2D3B42;
+    padding : 20px;
+    text-align: center;
+    font-weight: bold;
 }
 
 
@@ -647,6 +653,24 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         width: @my_dp_size/1.5;
         height: @my_dp_size/1.5;
     }
+    .timeline:after{
+        display : none;
+        visibility: hidden;
+    }
 
 
 }
+.black{
+    color : @black;
+}
+.timeline:after{
+    content: '';
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    background: #222;
+    top: 0px;
+    margin-left: 370px;
+    margin-right: auto;
+    display: block;
+    }

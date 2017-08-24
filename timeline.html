@@ -1,8 +1,22 @@
 <head>
     <title>Shriya &ndash; Timeline</title>
 </head>
-<div class="content" style="max-width:80%">
+<div class="header">
+<h1 id="my_name">Shriya Sasank</h1>
+<div id="static-image">
+<img id="default" class="pure-img-responsive img-circle-bordered opaque" src="/img/shriya.jpg" alt="UCLA">
+<img id="uclaimg" class="pure-img-responsive img-circle-bordered" src="/img/UCLA.jpg" alt="UCLA">
+<img id="adobeimg" class="pure-img-responsive img-circle-bordered" src="/img/adobe.jpg" alt="adobe">
+<img id="ctfimg" class="pure-img-responsive img-circle-bordered" src="/img/ctf.png" alt="CTF">
+<img id="cegimg" class="pure-img-responsive img-circle-bordered" src="/img/ceg.jpg" alt="CEG">
+<img id="tcsimg" class="pure-img-responsive img-circle-bordered" src="/img/tcs.png" alt="TCS">
+</div>
+<!-- <h2>Portfolio</h2> -->
+</div>
 
+<div class="content" style="max-width:80%; z-index : 1">
+        <h2 class="content-subhead">Timeline</h2>
+        
 	<div id="handle">
 		<ul class="timeline">
 			{{#events}}
@@ -30,64 +44,64 @@
 		data = {
 				events: [
 					{
-						"title": "<b>SAP Web Developer Intern</b>, Adobe, San Jose, California", 
-						"time": "Jun 2017 – current", 
+						"title": "<b>SAP Web Developer Intern</b>, <span class='black'>Adobe, San Jose, California</span>", 
+						"time": "<small>Jun 2017 – present</small>", 
 						"content": "", 
 						"img":"/img/adobe.jpg",
 					},
 					{
-						"title": "<b>Teaching Assistant</b> for Fundamentals of Artifical Intelligence, UCLA", 
-						"time": "Jan 2017 - current", 
+						"title": "<b>Teaching Assistant</b>, <span class='black'>Fundamentals of Artifical Intelligence, UCLA</span>", 
+						"time": "<small>Jan 2017 - prsent</small>", 
 						"content": "Conducting discussion sessions, grading assignments and evaluating projects for undergraduate students in Artificial Intelligence", 
 						"img":"/img/UCLA.jpg",
 					},
 					{
 						"title": "<b>Data Analysis using Apache Spark</b>", 
-						"time": "Sep - Dec 2016", 
+						"time": "<small>Sep 2016 - Dec 2016</small>", 
 						"content": "Developed a map-reduce system that uses Federal Election Data to analyze contributions of commitees to front-runners in the 2016 election campaign<br>					        Built a spark-streaming application that runs map-reduce on live data-streams from Netcat server <br>					        Implemented Hash-based and Hybrid-hashing aggregation and Average Aggregate techniques in Apache Spark", 
 						"img":"/img/UCLA.jpg",
 					},
 					{
 						"title": "Joined <b>University of California, Los Angeles</b>", 
-						"time": "Sep 2016", 
+						"time": "<small>Sep 2016</small>", 
 						"content": "Masters in Computer Science Engineering: <b>GPA 3.567/4 </b>",
 						"img":"/img/UCLA.jpg",
 					},
 					{
 						"title": "Graduated from <b>College of Engineering, Guindy, Anna University</b>", 
-						"time": "Jul 2016", 
+						"time": "<small>Jul 2016</small>", 
 						"content": "Bachelor of Engineering, Computer Science and Engineering : <b>CGPA 9.69/10</b>",
-						"img":"/img/CEG.png",
+						"img":"/img/ceg.jpg",
 					},
 					{
-						"title": "<b>Aerial Eyes</b> – Quadcopter implementing 3D Object Reconstruction ", 
-						"time": "Dec 2015 - Feb 2016", 
+						"title": "<b>Aerial Eyes</b> – <span class='black'>Quadcopter implementing 3D Object Reconstruction</span>", 
+						"time": "<small>Dec 2015 - Feb 2016</small>", 
 						"content": "Built a quadcopter from scratch running on Raspberry Pi 2 microprocessor that performs aerial photogrammetry and reconstruct 3D Point Clouds of the environment and perform panorama stitching  <br>            				The project was developed using Python, OpenCV and Android Programming", 
-						"img":"/img/CEG.png",
+						"img":"/img/ceg.jpg",
 					},
 					{
-						"title": "<b>Twitter Sentiment Analysis</b> of Products and Brands", 
-						"time": "Aug - Oct 2015", 
+						"title": "<b>Twitter Sentiment Analysis</b> <span class='black'>of Products and Brands<span class='black'>", 
+						"time": "<small>Aug 2015 - Oct 2015</small>", 
 						"content": "Developed an application using Python that uses Machine Learning to perform Sentiment Analysis of tweets in real-time with automatic classification and pictorial-rendering in the form of graphs on a web page", 
-						"img":"/img/CEG.png",
+						"img":"/img/ceg.jpg",
 					},
                 	{
-						"title": "<b>Student Director</b>, Web and Tech Team, CEG Tech Forum, Chennai ", 
-						"time": "July 2015 - July 2016", 
+						"title": "<b>Student Director</b>, <span class='black'>Web and Tech Team, ceg Tech Forum, Chennai<span class='black'> ", 
+						"time": "<small>July 2015 - July </small>", 
 						"content": "Developed college event and symposium website, mobile applications and online games and provided technical support for the events <br>                Developed the UI for online events Cerebra, Athena and Sherlock using AngularJS, HTML5, CSS3, Javascript, Jquery and RenPY. <br>                Worked with AWS and Ruby on Rails backend technology <br>                Trained freshmen and sophomores to handle technical issues during online events, mentored them in Front-End and Android Development and conducted technical workshops for students from various colleges", 
 						"img":"/img/ctf.png",
 					},
 					{
-						"title": "<b>Web Developer and Designer</b>, Tata Consultancy Services, Chennai ", 
-						"time": "May - June 2015", 
+						"title": "<b>Web Developer and Designer</b>,<span class='black'>Tata Consultancy Services, Chennai</span>", 
+						"time": "<small>May 2015 - June 2015</small>", 
 						"content": "Redesigned the 'Campus Commune' portal, a technical website for students and employees, using Front-End tools including HTML5, Javascript; changed the information architecture of both portals using Ruby on Rails.", 
 						"img":"/img/tcs.png",
 					},
 					{
 						"title": "Joined <b>College of Engineering, Guindy, Anna University</b>", 
-						"time": "Aug 2012", 
+						"time": "<small>Aug 2012</small>", 
 						"content": "Bachelor of Engineering, Computer Science and Engineering",
-						"img":"/img/CEG.png",
+						"img":"/img/ceg.jpg",
 					},
 				]
 			}
