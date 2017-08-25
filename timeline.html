@@ -124,5 +124,8 @@
 	  	$('#handle').html(rendered);
 	  	$('#menu li a').parent().removeClass("active");
         $('#menu li a').filter("[href='#/timeline']").parent().addClass("active");
+        $('html, body').stop().animate({ 
+                      scrollTop: 0
+                  }, 500, 'swing');
 	</script>
 </div>
