@@ -292,7 +292,7 @@
                   // close menu
                   $("#layout").removeClass("active");
                   $('html, body').stop().animate({ 
-                      scrollTop: $(href).offset().top+1
+                      scrollTop: $(href).offset().top-120
                   }, 500, 'swing');
                   e.preventDefault();
             }catch(err){

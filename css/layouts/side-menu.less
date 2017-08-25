@@ -640,11 +640,12 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         /*margin-left : -150px;*/
     }
     .menu-link{
+        z-index: 11 !important;
         padding : 38px;
         top : 0;
     }
     .content {
-        /*top : 80px;*/
+        top : 100px;
     }
     #my_name{
         font-size: 1.5rem;
@@ -668,7 +669,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     width: 10px;
     height: 100%;
     position: absolute;
-    background: #222;
+    background: @primary_dark;
     top: 0px;
     margin-left: 370px;
     margin-right: auto;
