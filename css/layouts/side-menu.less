@@ -133,10 +133,9 @@ body {
 }
 
 .timeline .timeline-heading h4 {
-  margin-top:22px;
-    margin-bottom: 4px;
     padding:0;
     color: #b3b3b3;
+    line-height: 1.5;
 }
 
 .timeline .timeline-heading h4.subheading {
@@ -146,11 +145,13 @@ body {
     font-size:18px;
     color:#333333;
 }
-
+.timeline .timeline-body{
+    padding-top : 10px;
+}
 .timeline .timeline-body>p,
 .timeline .timeline-body>ul {
     margin-bottom: 0;
-    color:#808080;
+    color:@primary_dark;
 }
 /*Style for even div.line*/
 .timeline>li:nth-child(odd) .line:before {
@@ -500,7 +501,7 @@ appears on the left side of the page.
     background: @primary;
     overflow-y : hidden;
     -webkit-overflow-scrolling: touch;
-    font-family: @body_font;
+    font-family: @title_font;
 /*font-family: 'Cardo', serif;*/
 
 }
