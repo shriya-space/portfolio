@@ -89,16 +89,21 @@ body {
 .timeline>li .timeline-image {
     z-index: 100;
     position: absolute;
-    left: 430px;
     /*border: 5px solid @secondary_dark;*/
     border-radius: 100%;
     /*background-color: @primary;*/
     box-shadow: 0 0 5px @primary_dark;
     width: @my_dp_size;
     height: @my_dp_size;
-    margin-left: -@my_dp_size;
     top:25%;
     /*margin-top: 50%;*/
+}
+
+.timeline.timeline-image{
+    left : 41% !important;
+}
+.timeline.timeline-inverted.timeline-image{
+    left : 42.5% !important;
 }
 
 .timeline>li .timeline-image h4 {
@@ -277,12 +282,7 @@ body {
     height: @my_dp_size;
     margin-bottom:0px;
   }
-  .timeline>li:nth-child(even) .timeline-image {
-    left: 50.5% !important;
-  }
-  .timeline>li:nth-child(odd) .timeline-image {
-    left: 49% !important;
-  }
+  
   .timeline > li:nth-child(even) .timeline-panel {
     width: 100%;
     padding: 0 0 20px 14px;
